@@ -1,0 +1,14 @@
+<div *ngFor="let pers of personlist">
+<span>DNI: {{pers.dni}}</span>    
+<span>Nombre: {{pers.nombre}}</span>
+<span>Apellido: {{pers.apellido}}</span>
+<span>Edad: {{pers.edad}}</span>
+
+<div *ngIf="pers.edad >= 18">
+    <span>Es mayor de edad</span>
+</div>
+
+<div *ngIf="pers.edad < 18">
+    <span>Es menor de edad</span> </div>
+
+</div>
