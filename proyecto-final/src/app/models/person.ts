@@ -1,7 +1,7 @@
 export class Person {
     edad: number;
-    nombre: string;
-    apellido: string;
+    nombre: String;
+    apellido: String;
     dni: number
 
     constructor(edad: number, nombre: string, apellido: string, dni: number ) {
