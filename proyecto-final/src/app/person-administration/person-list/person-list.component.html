@@ -1,0 +1,19 @@
+<h3>Detalle de una persona</h3>
+
+<div *ngFor="let pers of personList" class="persona-container">
+  <span>DNI: {{ pers.dni }}</span>
+  <span>Nombre: {{ pers.nombre }}</span>
+  <span>Apellido: {{ pers.apellido }}</span>
+  <span>Edad: {{ pers.edad }}</span>
+
+  <div *ngIf="pers.edad >= 18">
+    <span>Es mayor de edad</span>
+  </div>
+
+  <div *ngIf="pers.edad < 18">
+    <span>Es menor de edad</span>
+  </div>
+  <button (click)="seleccionarPersona(pers)">Editar</button>
+</div>
+
+<app-person-detail [selectedPerson]="selectedPerson"></app-person-detail>
